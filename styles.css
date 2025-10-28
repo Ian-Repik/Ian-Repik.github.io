@@ -1,5 +1,5 @@
 body {
-background: OliveDrab;
+background: hsl(80, 60%, 35%);
 font-family: Arial, Helvetica, sans-serif;
 }
 h1 {
@@ -14,7 +14,7 @@ flex-wrap:wrap;
 width: 30%;
 margin: 10px;
 padding: 20px 10px;
-background: white; /* pick a color */
+background: hsla(81, 59%, 22%, 0.831);
 border-radius: 25%;
 }
 }
