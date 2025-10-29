@@ -14,11 +14,12 @@ h1 {
 }
 
 .project img {
-  width: 300px;
-  height: 300px;
+    width: 300px;
+  height: auto; /* automatically adjusts height to keep proportions */
   margin: 10px auto;
   border: 2px solid rgb(14, 96, 0); 
   display: block;
+
 }
 a { /* change the appearance of ALL links */
 text-decoration: none;
