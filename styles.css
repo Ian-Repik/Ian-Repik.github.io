@@ -10,11 +10,12 @@ text-align: center;
 display:flex;
 flex-wrap:wrap;
  } 
-.project {
-width: 30%;
+.project img{
+width: 300px;
+height: 300px;
 margin: 10px;
-padding: 20px 10px;
-background: hsl(82, 28%, 31%);
-border-radius: 25%;
+border: 2px solid rgb(14, 96, 0); /* choose a color */
+display: block;
+margin: auto;
 }
 }
