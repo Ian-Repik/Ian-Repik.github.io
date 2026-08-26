@@ -1,0 +1,40 @@
+/* Structural */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #A9B2AC ;
+    background-size: cover;
+    margin:0%
+}
+#headcont{
+   
+    background-color: rgba(171, 167, 146, 0.75);
+    border: 5px solid #BCD0C7;
+    padding-left: 2%;
+    margin: 0%;
+    border-radius: 5px ;
+}
+
+#content{
+    margin: 0px;
+    background-color: rgba(171, 167, 146, 0.75);
+    width: auto;
+    padding:5%;
+    border: 5px solid #BCD0C7;
+    margin: 0%;
+  
+
+}
+
+/* Tpogtaphy */
+p{
+    color:rgb(99, 99, 92);
+}
+a{
+color: #7e9368;
+text-decoration: none;
+}
+ h1,h2,h3,h4{
+    color: #555f49;
+    font-family:'Times New Roman', Times, serif;
+
+}
