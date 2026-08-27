@@ -2,10 +2,11 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background: #A9B2AC;
-    margin: 10%;
+    margin: 0%;
 }
 
 #headcont {
+    padding-left: 0%;
     background-color: rgba(171, 167, 146, 0.75);
     border: 5px solid #BCD0C7;
     margin: 0;

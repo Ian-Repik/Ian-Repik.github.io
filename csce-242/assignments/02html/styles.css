@@ -1,23 +1,24 @@
 /* Structural */
 body{
 background-color: #334139;
-margin: 0%;
+margin: 1%;
 }
 
 #headcont{
-padding: auto;
-width: 50%;
-
+padding: 5px;
+width: auto;
 background-color: #1E2D24;
+border: 5px solid #151f19;
 margin: 0%;
 }
 
 #content{
-padding: auto;
+padding: 5px;
 background-color: #1E2D24;
+border: 1px solid rgba(30, 45, 36,30%);
 width: auto;
 margin: 0%;
-
+border: 5px solid #151f19;
 }
 
 /* Tpogtaphy */
@@ -27,7 +28,7 @@ h1,h2,h3{
 p{
     color:#F9B4ED;
 }
-tr{
+#realtable{
     color:#ff00d4;
     background-color: #faebd7;
     border: 5px soild black;
