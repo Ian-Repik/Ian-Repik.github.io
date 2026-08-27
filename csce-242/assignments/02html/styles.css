@@ -1,0 +1,37 @@
+/* Structural */
+body{
+background-color: #334139;
+margin: 0%;
+}
+
+#headcont{
+padding: auto;
+width: 50%;
+
+background-color: #1E2D24;
+margin: 0%;
+}
+
+#content{
+padding: auto;
+background-color: #1E2D24;
+width: auto;
+margin: 0%;
+
+}
+
+/* Tpogtaphy */
+h1,h2,h3{
+    color:#98458b;
+}
+p{
+    color:#F9B4ED;
+}
+tr{
+    color:#ff00d4;
+    background-color: #faebd7;
+    border: 5px soild black;
+}
+img {
+    border: 2px solid #C52184;
+}

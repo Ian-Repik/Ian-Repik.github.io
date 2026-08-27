@@ -1,28 +1,26 @@
 /* Structural */
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #A9B2AC ;
-    background-size: cover;
-    margin:0%
-}
-#headcont{
-   
-    background-color: rgba(171, 167, 146, 0.75);
-    border: 5px solid #BCD0C7;
-    padding-left: 2%;
-    margin: 0%;
-    border-radius: 5px ;
+    background: #A9B2AC;
+    margin: 10%;
 }
 
-#content{
-    margin: 0px;
+#headcont {
     background-color: rgba(171, 167, 146, 0.75);
-    width: auto;
-    padding:5%;
     border: 5px solid #BCD0C7;
-    margin: 0%;
-  
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
 
+#content {
+    background-color: rgba(171, 167, 146, 0.75);
+    border: 5px solid #BCD0C7;
+    border-top: 0;
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Tpogtaphy */
