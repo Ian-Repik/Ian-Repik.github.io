@@ -1,0 +1,57 @@
+/* Structural */
+body {
+    background: rgba(77, 32, 32,60%);
+}
+#content {
+    width: 100%;
+
+    margin:0;
+
+    background-color: rgba(77, 32, 32,60%);
+    padding-left:0% 
+
+}
+#sidebar{
+    background-color: rgba(29, 11, 11,0.8);
+    padding: 5px;
+}
+#info{
+    background: rgba(144, 170, 11, 0.8);
+    padding: 5px;
+}
+/* Typography */
+p{
+    color: white;
+}
+h1, h2, h3, li {
+    color: rgb(215, 213, 213);
+}
+#links,#mainnav{
+    list-style-type: none;
+    padding-left:0%
+    /* link style: none; */
+}
+/* Layout */
+@media (min-width: 900px) {
+    .columns {
+        display: flex;
+    }
+    .one{
+        flex: 1;
+    }
+    .two{
+        flex: 2;
+    }
+    .three{
+        flex: 3;
+    }
+    .four{
+        flex: 4;
+    }
+    .five{
+        flex: 5;
+    }
+    .six{
+        flex: 6;
+    }
+}
