@@ -1,11 +1,15 @@
 body{
     background-color: rgba(236, 39, 39, 0.6);
     color: white;
-    font-family: Arial, Helvetica, timesnew-roman,;
+    font-family: Arial, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
+    
 
-
+}
+#links {
+    padding-inline-start: 0;
+}
 h1{
     background-color: rgba(77, 32, 32,60%);
     padding: auto;
@@ -13,6 +17,26 @@ h1{
     text-align: center;
 }
 
+
+
+#topnav a {
+    text-align: center;
+    display: block;
+    padding: 15px 0px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(124, 33, 143, 0.63);
+    border: 2px solid rgba(80, 0, 67, 0.6);
+}
+#topnav li,ul{
+    padding-inline-start: 0;
+    width: 100%;
+    flex: 1;
+    margin: 0px;
+    list-style-type: none;
+    text-decoration: none;
+    
+}
 h2{
     padding: 2px ;
     margin: 2px;
@@ -30,30 +54,60 @@ p{
     text-align: center;
    
 }
-li,ul{
-    padding:0%;
-    margin: auto;
+#links li{
     text-align: center;
-    text-decoration: none; 
-    list-style-type: none;
-    background: peachpuff;
-    border: 2px solid  rgba(80, 0, 67,0.6);
+    display: block;
+    padding: 15px 30px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(224, 55, 120, 0.63);
+    border: 2px solid rgb(63, 3, 53);
+}
+aside{
+    padding: 10px;
+    background-color: rgba(168, 27, 145, 0.6);
 }
 
+#sidebar {
+margin: 10px;
+height: 400px;
+}
+#maincont{
+    padding: 0px;
+    margin: 5px;
+}
+#bottom{
+    padding: 0px;
+    margin: 0px;
+    background-color: rgba(0, 0, 0, 0.6);
 
 
 
-
+}
+footer{
+padding:10px;
+margin: 10px;
+}
 
 @media (min-width: 900px) {
     .columns {
-        display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
     }
+    #topnav {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    margin: 5px;
+}
+    .bottomrow {
+    display: flex;}
     .one{
         flex: 1;
     }
     .two{
-        flex: 2;
+        flex: 1;
     }
     .three{
         flex: 3;

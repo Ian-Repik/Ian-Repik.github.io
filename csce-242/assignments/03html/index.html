@@ -1,43 +1,76 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <div>
-    <title>Assignment 3</title>
-    <link rel="stylesheet" href="styles.css"/>
-    
-</head>
-</div>
-<div>
-<body>
-    <header class="columns">
-<h1>Layout with Flex</h1>
-    </header>
-    <main class="columns">
-        <aside id="sidebar">
-                <h2>Side Bar</h2>
+    <head>
+       
+            <title>Assignment 3</title>
+            <link rel="stylesheet" href="styles.css"/>
+      
+    </head>
 
-                <ul id="links">
-                    <li>link 1</li>
-                    <li>link 2</li>
-                    <li>link 3</li>
-                </ul>
-            </aside>
-        <section class="one">
+
+    <body>
+        <header>
+            <h1>Layout with Flex</h1>
+        <ul id="topnav" >
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">staff</a></li>
+                        <li><a href="#">contact</a></li>
+                    </ul>
+                </header>
+    <main class="columns">
+        
+        <aside id="sidebar" class="one">
+            <h2 id="sidebar-title"> Side Bar</h2>
+                <nav>
+                    <ul id="links" class="three">
+                        <li>link 1</li>
+                        <li>link 2</li>
+                        <li>link 3</li>
+                        <li>link 4</li>
+                    </ul>
+                </nav>
+        </aside>
+        <section class="two">
             <h2>Title 1</h2>
-            <p><img src="https://dummyimage.com/500x400/8dc7f0/000000.png" alt="Image 1"/></p>
+                <p><img src="https://dummyimage.com/500x400/8dc7f0/000000.png" alt="Image 1"/></p>
         </section>
         <section class="two">
             <h2>Title 2</h2>
-            <p><img src="https://dummyimage.com/500x400/8dc7f0/000000.png" alt="Image 2"/></p>
+                <p><img src="https://dummyimage.com/500x400/8dc7f0/000000.png" alt="Image 2"/></p>
         </section>
-        <section class="three">
+        <section class="two">
             <h2>Title 3</h2>
-            <p><img src="https://dummyimage.com/500x400/8dc7f0/000000.png" alt="Image 3"/></p>
+                <p><img src="https://dummyimage.com/500x400/8dc7f0/000000.png" alt="Image 3"/></p>
         </section>
+        <div id="bottom" class="bottomrow">
+            <section>
+                <p><img src="https://dummyimage.com/300x300/4690ab/0011ff.png" alt="Image 4"/></p>
+            </section>
+            <section id="maincont">
+                 <h3>Idea 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet imperdiet purus id vehicula. Integer nec porttitor magna, eu viverra ex. Donec sed facilisis tellus. Suspendisse non mollis turpis. Sed dictum sit amet sapien nec volutpat. Curabitur semper non mi placerat vehicula. Sed id fermentum ante, et tempus sem. Integer vel lorem nec leo iaculis tempus. Integer molestie purus a massa accumsan, sit amet fermentum dolor sodales. Suspendisse potenti. Proin dapibus nulla vel erat sollicitudin, egestas ultricies elit tincidunt. Cras finibus, erat ut ultricies maximus, nulla nibh dignissim lacus, eu cursus mi dui eget eros. Pellentesque sed ligula diam.</p>
+            </section>
+            <section>
+                <p><img src="https://dummyimage.com/300x300/4690ab/0011ff.png" alt="Image 5"/></p>
+            </section>
+        </div>
+        <div id="bottom" class="bottomrow">
+            <section>
+                <p><img src="https://dummyimage.com/300x300/4690ab/0011ff.png" alt="Image 4"/></p>
+            </section>
+            <section id="maincont">
+                <h3>Idea 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean aliquet imperdiet purus id vehicula. Integer nec porttitor magna, eu viverra ex. Donec sed facilisis tellus. Suspendisse non mollis turpis. Sed dictum sit amet sapien nec volutpat. Curabitur semper non mi placerat vehicula. Sed id fermentum ante, et tempus sem. Integer vel lorem nec leo iaculis tempus. Integer molestie purus a massa accumsan, sit amet fermentum dolor sodales. Suspendisse potenti. Proin dapibus nulla vel erat sollicitudin, egestas ultricies elit tincidunt. Cras finibus, erat ut ultricies maximus, nulla nibh dignissim lacus, eu cursus mi dui eget eros. Pellentesque sed ligula diam.</p>
+            </section>
+            <section>
+                <p><img src="https://dummyimage.com/300x300/4690ab/0011ff.png" alt="Image 5"/></p>
+        </section>
+    </div>
     </main>
     <footer class="columns">
         <p>&copy; ianrepik</p>
     </footer>
 </body>
-</div>
+
 </html>
