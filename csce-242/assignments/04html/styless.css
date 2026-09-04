@@ -88,16 +88,65 @@
         padding: 35px;
         text-align: center;
     }
+    #eduimg{
+        position: relative;
+    }
+    #eduimg img{
+        display: block;       
+        width: 100%;
+       
+    }
+  
     #edubox{
-    width: 400px;
-    min-height: 250px;
-    margin: 0;
+    position: absolute;
+    right: 4%;
+    bottom: -27px;
+    width: 58%;
     padding: 30px;
-    box-shadow: 0 0 20px 5px rgba(30, 30, 60, .3);
+    box-sizing: border-box;
     background: rgb(118, 1, 11);
     color: white;
-    box-sizing: border-box;
+    box-shadow: 0 0 20px 5px rgba(30, 30, 60, .3);
     }
+    #person img{
+        display: block;
+        border-radius: 100%;
+    }
+  #info {   
+    display: flex;
+    align-items: center;
+    min-height: 100px;
+    padding: 100px; 
+
+}
+#resimg{
+        position: relative;
+    }
+    #resimg img{
+        display: block;       
+        width: 100%;
+    }
+#resbox{
+    position: absolute;
+    width: 48%;
+    bottom: -27px;
+    padding: 5px;
+    box-sizing: border-box;
+    background: rgb(118, 1, 11);
+    color: white;
+    box-shadow: 0 0 20px 5px rgba(30, 30, 60, .3);
+}
+#resbtn{
+    content: center;
+    background: black;
+    margin: 30px -30px -30px;
+    padding: 15px 30px;
+    color: white;
+    display: block;
+    margin: 15px auto;
+}
+
+}
     /* Footer Styles */
     #footer-header{
         position: relative;
@@ -193,3 +242,4 @@
             flex: 6;
         }
     }
+}
