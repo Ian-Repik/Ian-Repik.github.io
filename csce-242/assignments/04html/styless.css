@@ -1,27 +1,39 @@
 
-
+body {
+    margin: 0;
+    padding: 0;
+body h2 {
+        font-size:2rem;    
+       font-family: "Berlingske Sans", Arial, Helvetica, sans-serif;
+}
 
 /*header styles*/
 header{
     background: black;
 }
-header h1,header h2{
+header h3,header h2{
     color: white;
     margin: 0;
 }
 
 #header-social{
     position: absolute;
-    left: 5px;
-    top: 0px;
+    left: -15px;
+    top: -15px;
     list-style: none;
     
+}
+.bar li:not(:last-child)::after {
+  content: "|";
+  margin-left: 10px; /* Space before the pipe */
+  color: #ccc;       /* Optional: give the pipe a lighter color */
 }
 #header-social li{
     display: inline-block; 
 }
 #header-social a{
     text-decoration: none;
+    color: white;
 }
 #header-links {
     background:maroon;
@@ -38,15 +50,53 @@ header h1,header h2{
     top: 50px;
     right: 5%;
 }
+/* Navigation Styles */
+#nav{
+    
+    background: rgb(118, 1, 11);
+    color: white;
+    margin: 0;
+    text-align: right;
+    text-transform: uppercase;
+  
+    
+}
+#button button{
+    padding: 15px 59px;
+    background: rgb(118, 1, 11);
+    border:rgb(118, 1, 11);
+    cursor: pointer;
+    text-transform: uppercase;
+  
+}   
+#button button:hover {
+    background-color: rgba(116, 0, 0, 0.733);
+    transition: background-color 0.3s ease;
+
+}
+#button p{
+    color: white;
+}
+#main-social{ 
+    list-style: none;
+    display: inline-block;  
+    border: 1px solid white;    
+}
+/* Main Styles */
+main P{
+    margin: 35  px;
+    padding: 35px;
+    text-align: center;
+}
 /* Footer Styles */
 #footer-header{
     position: relative;
-    background: maroon;
+    background: rgb(118, 1, 11);
+    margin: 0;
 }
 #footer-social{
     position: absolute;
-    right: 5px;
-    top: 5px;
+    right: 25px;
     list-style: none;
     
 }
@@ -57,7 +107,7 @@ header h1,header h2{
     text-decoration: none;
 }
 #footer-links {
-    background:maroon;
+    background: rgb(118, 1, 11);
     color: white;
 }
 #footer-links a{
@@ -132,4 +182,4 @@ header h1,header h2{
     .six{
         flex: 6;
     }
-}
+}}
