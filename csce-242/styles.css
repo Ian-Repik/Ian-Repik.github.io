@@ -57,17 +57,26 @@ body {
     
 
 }
+
 footer.columns {
     display: flex;
     justify-content: center;
+}
+
+/*youtube*/
+#youtube a{
+   
 }
 /* Tpogtaphy */
 p{
     color:rgb(99, 99, 92);
 }
 a{
-color: #7e9368;
+color: #9ab97a;
 text-decoration: none;
+ font-size: 24px;
+ background-color: rgba(141, 143, 141, 0.473);
+
 }
  h1,h2,h3,h4{
     text-align: center;
