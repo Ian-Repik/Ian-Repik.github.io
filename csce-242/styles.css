@@ -48,9 +48,18 @@ body {
 }
 #imgcardf  {
      background-color: rgba(11, 58, 21, 0.63);
-    padding: 10px;
+    padding: 1px;
     width: fit-content;
-    margin: auto;
+    flex:none;
+    margin: 15px;
+    width: 350px;   
+    height: 450px;
+    
+
+}
+footer.columns {
+    display: flex;
+    justify-content: center;
 }
 /* Tpogtaphy */
 p{
@@ -66,6 +75,9 @@ text-decoration: none;
     font-family:'Times New Roman', Times, serif;
 
 }
+#imgcardf h2{
+    color:black;
+} 
 /* Layout */
 @media (min-width: 900px) {
     .columns {
