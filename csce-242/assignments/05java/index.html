@@ -3,48 +3,54 @@
     <head>
         <title>csce-242</title> 
         <link rel="stylesheet" href="styles.css"/>
-        <script src="intro.js"></script>
+        <meta charset="UTF-8"> <!---- lets the emojis work with html i looked it up and its called the Unicode hex code --->
     </head>
     <body>       
-            <header id="headcont" >
-                <div >
-            <h1>Assignment 7</h1>
-           
-                </div>
-                <div>
+        <header id="headcont" >
+            <div >
+                <h1>Assignment 7</h1>
+        </div>
+        <div>
                 <h3>Intro to java</h3>
+        </div>
+        </header>
+        <div id="content">
+        <main class="columns">
+            <section class="two">
+                <div id="click">    
+                    <div class="card">
+                        <h2>Speech</h2>
+                        <p id="p-message"></p>
+                    </div>
                 </div>
-            </header>
-             <div id="content">
-            <main class="columns">
-                <section class="two">
-            <div id="click">    
-            <div id="card">
-            <h2>Speech</h2>
-              <p id="p-message"></p>
-            </div>
-            </div>
-        </section>
-        <section class="two">
-            <div id="card">
-            <h2>Bevreage</h2>
-                <p>This is assignment two it was just an introduction to CSS, so we had to style the page with various CSS properties and create a more visually appealing layout.</p>
-            </div>
-        </section>
-        <section class="two">
-            <div id="card">
-            <h2>Add A Sticker</h2>
-                <p>This is assignment three it was just an introduction to Flex, so we had to create a page using flexbox properties, this one is by far the hardest.</p>
-            </div>
-        </section>
-          </div>
-            </main>
-
-  <footer class="columns">    
-  <p>&copy; ianrepik</p>
-</footer>
-<script src="intro.js"></script>
-
-       
+            </section>
+            <section class="two">
+                <div class="card">
+                        <h2>Car</h2>
+                        <label for="cars">Choose a car:</label>
+                        <select name="cars" id="cars">  
+                            <option value="Volvo">Volvo</option>
+                            <option value="Toyta">Toyta</option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Honda">Honda</option>
+                        </select>
+                        <p id="car-type"></p>
+                </div>
+            </section>
+            <section class="two">
+                <div class="card">
+                    <h2>Add A Sticker</h2>
+                    <div id="image-click"> 
+                        <img src="images/car-removebg-preview (1).png" alt="car">
+                        <p id="sticker"></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+        </main>
+        <footer class="columns">    
+            <p>&copy; ianrepik</p>
+        </footer>
+        <script src="intro.js"></script>
     </body>
 </html>
