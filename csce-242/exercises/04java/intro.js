@@ -72,4 +72,12 @@ btnStop.onclick = () =>
     btnStart.disabled = false;
     btnPause.disabled = true;
     btnStop.disabled = true;
-};  
+};
+
+//date display
+setInterval(()=>{
+    const pDisplay = document.getElementById("date-display");
+    const today = new Date();
+    const seconds = today.getSeconds();
+    pDisplay.innerHTML = seconds;
+}, 1000);
