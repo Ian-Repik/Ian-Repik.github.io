@@ -12,6 +12,11 @@
             <header id="main-header">
                 <h1>JavaScript</h1>
                 <nav id="main-nav">
+                    <div id="toggle-nav">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                     <ul class="columns">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="intro.html">Introduction</a></li>
@@ -22,11 +27,53 @@
                     </ul>
                 </nav>
             </header>
-            <section id="hero">
-                <img src="https://dummyimage.com/1600x400/C2CFC7/ffffff">
-                <a href="#" class="hero-arrow" id="hero-arrow-right">&gt;</a>
-                <a href="#" class="hero-arrow" id="hero-arrow-left">&lt;</a>
-            </section>
+            <main>
+                <h2 id="page-title">Introduction to JavaScript</h2>
+                <p id="date-display"></p>
+                <div class="projects">
+                    <section class="project-card">
+                        <h3>Button Click</h3>
+                        <button id="btn-show-message">Show Message</button>
+                        <p id="p-message"></p>
+                    </section>
+                    <section class="project-card">
+                        <h3>Link Click</h3>
+                        <a href="#" id="link">I'm a link</a>
+                    </section>
+                    <section class="project-card">
+                        <h3>Ball Animation</h3>
+                        <button id="btn-bounce">Toggle Bounce</button>
+                        <div id="ball"></div>
+                    </section>
+                    <section class="project-card">
+                        <h3>Plant Health</h3>
+                        <input type="number" id="txt-num-days">
+                        <p id="p-plant-msg"></p>
+                        <img src="" id="img-plant" class="hidden">
+                    </section>
+                    <section class="project-card">
+                        <h3>Counter</h3>
+                        <p>
+                            <button id="btn-start">Start</button>
+                            <button id="btn-pause">Pause</button>
+                            <button id="btn-stop">Stop</button>
+                        </p>
+                        <p id="p-count"></p>
+                    </section>
+                    <section class="project-card">
+                        <h3>Fund Raising</h3>
+                        <p>Goal is $<span id="goal"></span></p>
+                        <p>
+                            <lable for="txt-donation">Donation</lable>
+                            <input id="txt-donation" type="number">
+                            <button id="btn-donation"> Submit</button>
+                        </p>
+                        <div id="thermometer"></div>
+                        <p id="donation-message"></p>
+                    </section>
+                </div>
+            </main>
         </div>
+        <script src="intro.js"></script>
     </body>
 </html>
