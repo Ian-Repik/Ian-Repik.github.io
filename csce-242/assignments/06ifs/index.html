@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Assignment 8</title>
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8"> <!---- lets the aroows work with html i looked it up and its called the Unicode hex code --->
+
+    </head>
+
+    <body>
+        <div id="content">
+            <header>
+                <h1>Assignment 8</h1>
+                <h2>If Statements</h2>
+
+                <nav id="main-nav">
+                    <p id="toggle-nav">▼</p>
+<!--- exersise buttons  -->
+                    <ul>
+                        <li><a href="#" id="exercise-one">Exersise 1</a></li>
+                        <li><a href="#" id="exercise-two">Exersise 2</a></li>
+
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+<!--- this is the exersise 1 content -->
+
+                <section id="missing-class">
+                    <h3>Missing class point deductions</h3>
+                    <lable>
+                        How many days will you miss?
+                    </lable>
+
+                    <input type="number" id="txt-days" min="0">
+
+                    <p id="deduction-message"></p>
+                    <p id="attendance-message"></p>
+                </section>
+<!--- this is the exersise 2 content -->
+                <section id="semester-section" class="hidden">
+                    <h3>End of Semster counter</h3>
+
+                    <p id="days-laft-message"></p>
+                    <p id="semester-message"></p>
+                </section>
+            </main>
+            <footer>
+                <p>@ianrepik</p>
+            </footer>
+        </div>
+        <script src="java.js"></script>
+    </body>
+</html>

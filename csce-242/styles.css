@@ -57,10 +57,15 @@ body {
     
 
 }
+#imgcardf img{
+    display: block;
+    margin: auto;
+}
 
 footer.columns {
     display: flex;
     justify-content: center;
+    margin-top: 5px;
 }
 
 /* Tpogtaphy */
@@ -83,13 +88,38 @@ text-decoration: none;
 #imgcardf h2{
     color:black;
 } 
-/* Layout */
+/* Layout laptops */
+@media (min-width: 700px) {
+    .columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        align-items: flex-start;
+    }
+
+    .fotter-columns {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #imgcardf {
+        margin: 0;
+    }
+}
+/* Layout phones */
+
 @media (min-width: 900px) {
     .columns {
     display: flex;
     }
-    .bottomrow {
-    display: flex;}
+    .fotter-columns {
+    display:flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: center;}
     .one{
         flex: 1;
     }

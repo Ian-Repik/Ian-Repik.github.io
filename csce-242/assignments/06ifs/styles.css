@@ -1,0 +1,98 @@
+
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(154, 120, 73, 0.742);
+    color:darkred
+}
+
+#content{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+
+h1{
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+h2{
+    color:brown;
+    font-size: 10px;
+}
+#main-nav ul{
+    list-style-type: none;
+    padding-left:0;
+}
+#main-nav li{
+    padding: 5px;
+}
+#main-nav a {
+    color: blue;
+    text-decoration: none;
+    cursor: pointer;
+}
+#semester-section{
+    background-color:rgba(183, 174, 162, 0.742); ;
+    border:5px solid darkred ;
+}
+#missing-class{
+    background-color:rgba(183, 174, 162, 0.742); ;
+    border:5px solid darkred ;
+}
+#main-nav a:hover {
+    color: purple;
+}
+#toggle-nav{
+    text-align left;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 15px 0;
+}
+main section{
+    background: cream;
+    border: 1px sloid red;
+    padding: 20px;
+    margin-top: 15px;
+    min-height: 110px;
+}
+
+input{
+    display: block;
+    width: 200px;
+    margin: 15px auto;
+    font-size: 16px;
+}
+
+.hidden{
+    display: none;
+}
+@media (min-width: 600px) {
+    #content {
+        width: 90%;
+        max-width: 850px;
+    }
+
+    #toggle-nav {
+        display: none;
+    }
+
+    #main-nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    #main-nav li {
+        padding: 0 8px;
+    }
+
+    #main-nav li:not(:last-child)::after {
+        content: "|";
+        margin-left: 16px;
+    }
+
+    #main-nav ul.hidden {
+        display: flex;
+    }
+}
