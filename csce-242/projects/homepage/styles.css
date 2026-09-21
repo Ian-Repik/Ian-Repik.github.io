@@ -20,6 +20,8 @@ body{
     display: inline-block;
     margin: 0 35px 0 0;
     font-family:Georgia, 'Times New Roman', Times, serif ;
+    background-color: #1e332f;
+    border-radius: 10%;
 }
 #main-nav {
     display: inline-block;
@@ -37,17 +39,16 @@ body{
     color: white;
     font-weight: bold;
 }
-#header-art {
-    width: 220px;
+#dragonimg {
+    width: 500px;
     position: absolute;
     right: 0;
     top: 0;
 }
 #intro {
-    background: #c6d0d0;
+    background: #cacece;
     min-height: 110px;
-    padding: 15px;
-    padding-right: 270px;
+    padding: 15px 270px 15px 15px;
     box-sizing: border-box;
 }
 #intro p {
@@ -56,6 +57,9 @@ body{
     font-size: 20px;
     font-weight: bold;
     max-width: 560px;
+    background-color: #e5e5e567;
+    border: 20px;
+    border-radius: 10%;
 }
 .coulms{
     display: flex;
