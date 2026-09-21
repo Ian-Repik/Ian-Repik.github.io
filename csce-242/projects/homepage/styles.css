@@ -9,6 +9,7 @@ body{
     margin: auto;
     background-color: #949B96;
 }
+/*Header Style */
 #main-header{
     min-height: 90px;
     background: #27433e;
@@ -25,13 +26,14 @@ body{
     border-radius: 999px;
     padding:20px;
 }
+/*Nav Styling*/
 #main-nav {
      display: inline-block;
     position: relative;
     left: 5px;
     top: 18px;
 }
-}
+
 #main-nav ul{
     list-style-type: none ;
     padding-left:0;
@@ -45,6 +47,7 @@ body{
     color: white;
     font-weight: bold;
 }
+/*Dragon Img placement */
 #dragonimg {
     width: 500px;
     position: absolute;
@@ -52,7 +55,7 @@ body{
     top: -20px;
      filter: drop-shadow(0 15px 8px rgba(0, 0, 0, 0.45));
 }
-
+/*Text and styles for the main info */
 #intro {
     background: #cacece;
     min-height: 110px;
@@ -72,10 +75,11 @@ body{
 .coulms{
     display: flex;
 }
+
 main {
     padding: 35px;
 }
-
+/*Styles for the art work/mini gallery */
 .art-row {
     display: flex;
     flex-wrap: wrap;
