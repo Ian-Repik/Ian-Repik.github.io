@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    background-color: darkslategrey;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+    width: 92%;
+    max-width: 1100px;
+    margin: 26px auto;
+    background-color: #949b96;
+    min-height: 100vh;
+}
+
+/* Header Style */
+#main-header {
+    background: #27433e;
+    color: white;
+    padding: 8px 15px;
+}
+
+#main-header h1 {
+    display: inline-block;
+    margin: 0;
+    font-family: "Jacquard 24", serif;
+    font-size: 30px;
+    background-color: #1e332f;
+    border-radius: 999px;
+    padding: 5px 25px;
+}
+
+/* Nav Styling */
+#main-nav {
+    display: inline-block;
+    margin-left: 35px;
+}
+
+#main-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#main-nav li {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+#main-nav a {
+    color: white;
+    font-size: 13px;
+}
+
+/* Gallery */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 25px;
+    padding: 25px;
+}
+
+.art-piece {
+    width: 28%;
+    text-align: center;
+}
+
+.art-piece img {
+    width: 100%;
+    border: 5px solid #cacece;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.art-piece h3 {
+    font-family: "Sail", cursive;
+    font-size: 22px;
+}

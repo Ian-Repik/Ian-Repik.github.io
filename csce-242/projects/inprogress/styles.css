@@ -1,0 +1,125 @@
+    body {
+        margin: 0;
+        background-color: darkslategrey;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #content {
+        width: 92%;
+        max-width: 1100px;
+        margin: 26px auto;
+        background-color: #949b96;
+        min-height: 100vh;
+    }
+
+    /* Header Style */
+    #main-header {
+        background: #27433e;
+        color: white;
+        padding: 8px 15px;
+    }
+
+    #main-header h1 {
+        display: inline-block;
+        margin: 0;
+        font-family: "Jacquard 24", serif;
+        font-size: 30px;
+        background-color: #1e332f;
+        border-radius: 999px;
+        padding: 5px 25px;
+    }
+
+    /* Nav Styling */
+    #main-nav {
+        display: inline-block;
+        margin-left: 35px;
+    }
+
+    #main-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    #main-nav li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+
+    #main-nav a {
+        color: white;
+        font-size: 13px;
+    }
+
+    /* Top description */
+    body > section,
+    #content > section {
+        background-color: #cacece;
+        margin: 0;
+        padding: 15px 35px;
+        text-align: center;
+    }
+
+    body > section p,
+    #content > section p {
+        margin: 0;
+        font-family: "Sail", cursive;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    /* Project rows */
+    main {
+        padding: 25px;
+    }
+
+    .project-row {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 45px;
+    }
+
+    .project-row img {
+        width: 32%;
+        max-width: 280px;
+        border: 5px solid #cacece;
+        box-sizing: border-box;
+    }
+
+    .project-row p {
+        flex: 1;
+        margin: 0;
+        padding: 25px;
+        text-align: center;
+        background-color: #cacece;
+        font-family: "Sail", cursive;
+        font-size: 19px;
+        font-weight: bold;
+    }
+    .extra-img {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .extra-img img {
+        border: 5px solid #cacece;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    /* Phone layout */
+    @media (max-width: 600px) {
+        .project-row,
+        .project-row.reverse {
+            flex-direction: column;
+        }
+
+        .project-row img {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
