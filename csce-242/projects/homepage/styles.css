@@ -52,7 +52,7 @@ body{
     width: 500px;
     position: absolute;
     right: -50px;
-    top: -20px;
+    top: 0px;
      filter: drop-shadow(0 15px 8px rgba(0, 0, 0, 0.45));
 }
 /*Text and styles for the main info */
