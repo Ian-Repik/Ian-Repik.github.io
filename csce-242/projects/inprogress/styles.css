@@ -1,9 +1,16 @@
-    body {
-        margin: 0;
-        background-color: darkslategrey;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
+   body {
+    
+    background-color: #a9b2ac;
+     background-image:
+        linear-gradient(
+            rgba(169, 178, 172, 0.45),
+            rgba(169, 178, 172, 0.45)
+        ), url("../images/303e6c3c-346c-42fd-a21b-40521509b4a4.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
     #content {
         width: 92%;
         max-width: 1100px;
@@ -97,18 +104,10 @@
         font-size: 19px;
         font-weight: bold;
     }
-    .extra-img {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
+
 
     .extra-img img {
         border: 5px solid #cacece;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
     }
 
     /* Phone layout */

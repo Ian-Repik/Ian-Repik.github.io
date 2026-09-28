@@ -1,0 +1,142 @@
+/* Structural */
+body {
+    
+    background-color: #a9b2ac;
+     background-image:
+        linear-gradient(
+            rgba(169, 178, 172, 0.45),
+            rgba(169, 178, 172, 0.45)
+        ), url("../images/303e6c3c-346c-42fd-a21b-40521509b4a4.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+header {
+    background-color: #294745;
+    border-bottom: 5px solid #BCD0C7;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+main {
+    border-left: 5px solid #BCD0C7;
+    border-right: 5px solid #BCD0C7;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.intro {
+    margin-bottom: 25px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+    width: 750px;
+    margin: 45px auto;
+}
+
+.gallery img {
+    padding: 8px;
+    width: 250px;
+    height: 340px;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+#main-nav {
+     display: inline-block;
+    position: relative;
+    left: 5px;
+    top: 18px;
+}
+
+#main-nav ul{
+    list-style-type: none ;
+    padding-left:0;
+    margin: 0;
+}
+#main-nav li{
+    display: inline-block;
+    margin-right: 15px;
+}
+#main-nav a {
+    color: white;
+    font-weight: bold;
+}
+
+/* Typography */
+h1 {
+    color: white;
+    font-family: 'Itim', cursive;
+    text-align: left;
+    margin: 0;
+        background-color: #1e332f;
+    border-radius: 999px;
+}
+
+h2 {
+    color: white;
+    font-family: 'Itim', cursive;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+p {
+    font-family: 'Itim', cursive;
+    color: white;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+}
+/*https://charlottedann.com/article/fancy-frames-with-css*/
+.frame {
+  --corner: 0.5em;
+  --bg: #294745;
+  background-image:
+    radial-gradient(calc(2 * var(--corner)) at    0    0, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%), /* Safari will break if we put 100% */
+    radial-gradient(calc(2 * var(--corner)) at    0 100%, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+    radial-gradient(calc(2 * var(--corner)) at 100% 100%, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+    radial-gradient(calc(2 * var(--corner)) at 100%    0, transparent 50%, var(--bg) 50%, var(--bg) 99.99%, transparent 99.99%),
+    linear-gradient(to  right, transparent var(--corner), var(--bg) var(--corner), var(--bg) calc(100% - var(--corner)), transparent calc(100% - var(--corner))),
+    linear-gradient(to bottom, transparent var(--corner), var(--bg) var(--corner), var(--bg) calc(100% - var(--corner)), transparent calc(100% - var(--corner)));
+}
+/* Laptop layout */
+@media (min-width: 700px) {
+    header {
+        display: flex;
+        align-items: center;
+    }
+
+    nav {
+        margin-left: 35px;
+        margin-top: 0;
+    }
+}
+
+/* Phone layout */
+@media (max-width: 699px) {
+    h1 {
+        text-align: center;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .gallery {
+        display: block;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .gallery img {
+        display: block;
+        width: 250px;
+        height: 340px;
+        margin: 30px auto;
+    }
+}
