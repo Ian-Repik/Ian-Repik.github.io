@@ -1,0 +1,46 @@
+/* Road CSS art created by Ian. */
+
+body {
+    margin: 0;
+}
+
+/* Green grass above and below the road */
+#green {
+    background-color: rgba(25, 180, 25, 0.781);
+    height: 70px;
+}
+
+/* Holds the road and lets cars be positioned inside it */
+#road-area {
+    position: relative;
+    height: 100px;
+    background-color: rgb(36, 36, 36);
+}
+
+/* The yellow dashed line between the lanes */
+#yellow {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    border-top: 5px dashed rgba(255, 238, 0, 0.699);
+}
+
+/* The main body of each car */
+.car {
+    position: absolute;
+    width: 70px;
+    height: 30px;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+/* The blue window on top of each car */
+.window {
+    position: absolute;
+    width: 30px;
+    height: 10px;
+    background-color: #9bdcff;
+    top: -8px;
+    left: 20px;
+   
