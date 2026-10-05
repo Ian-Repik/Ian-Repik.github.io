@@ -32,7 +32,7 @@ document.getElementById("txt-num-days").onkeyup = (e) => {
     } else if(numDays <= 7) {
         pMessage.innerHTML = `Oh no your plant is wilting it's been ${numDays} days.`;
     } else {
-        pMessage.innerHTML = "Your plant is a goner";
+        pMessage.innerHTML = "Your plant is a gooner";
     }
 }
 
@@ -78,26 +78,30 @@ btnStop.onclick = () =>
 setInterval(()=>{
     const pDisplay = document.getElementById("date-display");
     const today = new Date();
-    const month = today.getMonth();
+    const month = today.getMonth() + 1;
     const day = today.getDate();
     const year = today.getFullYear();
     const seconds = today.getSeconds();
-    const minutes =today.getMinutes();
+    const minutes = today.getMinutes();
     const hours = today.getHours();
     pDisplay.innerHTML = `${hours}:${minutes}:${seconds} ${month}/${day}/${year}`;
-    pDisplay.innerHTML = seconds;
 }, 1000);
 
-document.getElementById("toggle-nav").onclick = () => {
-    document.querySelector("#main-nav ul").classList.toggle("hidden");    
+//toggle the navigation
+document.querySelector("#toggle-nav").onclick = () => {
+    document.querySelector("#main-nav ul").classList.toggle("hide-small");
 }
-const GOAL=10000
-document.getElementById("goal").innerHTML = GOAL;
-document.getElementById("btn-donation").onclick = () => {
 
-    const userDontation = parseInt(document.getElementById("txt-donation").value);
+//record the users donation and fill up the thermometer appropriately
+const GOAL = 10000;
+document.getElementById("goal").innerHTML = GOAL;
+
+document.getElementById("btn-donation").onclick = () => {
+    const userDonation = parseInt(document.getElementById("txt-donation").value);
     const donationP = document.getElementById("donation-message");
-    percent = userDontation / GOAL * 100;    
-    donationP.innerHTML=`you are ${percent.toFixed(1)}% from your goal`;
-    document.querySelector(":root").styles.setProperty("--dontation", percent + "%");
+    percent = userDonation / GOAL * 100;
+    
+    donationP.innerHTML = `You are ${percent.toFixed(1)}% to your goal`;
+    document.querySelector(":root").style.setProperty("--donation", percent + "%");
+
 }
