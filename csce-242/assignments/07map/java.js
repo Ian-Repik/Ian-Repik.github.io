@@ -1,125 +1,71 @@
-/* Ian Repik - Vacation Class Assignment */
+//These are skate stores starting in Columbia and moving farther out
+const skateStores = {
+    "Bluetile Skate Shop - Columbia":
+        "https://www.google.com/maps?q=Bluetile+Skate+Shop+Columbia+SC&output=embed",
 
-class Vacation {
-    constructor(title, type, description, thingsToDo, image, mapSrc) {
-        this.title = title;
-        this.type = type;
-        this.description = description;
-        this.thingsToDo = thingsToDo;
-        this.image = image;
-        this.mapSrc = mapSrc;
+    "Blazer Skate and Moto - Greenville":
+        "https://www.google.com/maps?q=Blazer+Skate+and+Moto+Greenville+SC&output=embed",
+
+    "Bluetile Skate Shop - Charleston":
+        "https://www.google.com/maps?q=Bluetile+Skate+Shop+Charleston+SC&output=embed",
+
+    "Parrot Surf and Skate - Mount Pleasant":
+        "https://www.google.com/maps?q=Parrot+Surf+and+Skate+Mount+Pleasant+SC&output=embed"
+};
+
+//These are skate spots starting in Columbia and moving farther out
+const skateSpots = {
+    "Owens Field Skate Park - Columbia":
+        "https://www.google.com/maps?q=Owens+Field+Skate+Park+Columbia+SC&output=embed",
+
+    "Friarsgate Skate Park - Irmo":
+        "https://www.google.com/maps?q=Friarsgate+Skate+Park+Irmo+SC&output=embed",
+
+    "Red River DIY Skatepark - Rock Hill":
+        "https://www.google.com/maps?q=Red+River+DIY+Skatepark+Rock+Hill+SC&output=embed",
+
+    "SK8 Charleston":
+        "https://www.google.com/maps?q=SK8+Charleston+SC&output=embed"
+};
+
+//This runs when the user changes the destination type
+document.getElementById("destination-type").onchange = (e) => {
+    const selectedType = e.target.value;
+    const destinationLinks =
+        document.getElementById("destination-links");
+    const map = document.getElementById("map");
+
+    //This clears the links and hides the old map
+    destinationLinks.innerHTML = "";
+    map.classList.add("hidden");
+    map.src = "";
+
+    let destinations;
+
+    //This decides which associative array should be used
+    if(selectedType === "stores") {
+        destinations = skateStores;
+    } else if(selectedType === "spots") {
+        destinations = skateSpots;
+    } else {
+        return;
     }
 
-    /* Makes one vacation card */
-    getCard() {
-        const vacation = document.createElement("section");
-        vacation.classList.add("vacation");
+    //This creates a link for every destination in the array
+    for(let destinationName in destinations) {
+        const destinationLink = document.createElement("a");
 
-        const title = document.createElement("h2");
-        title.innerHTML = this.title;
+        destinationLink.innerHTML = destinationName;
+        destinationLink.href = "#";
 
-        const type = document.createElement("p");
-        type.innerHTML = this.type + " Vacation";
+        //This shows the map when a destination is clicked
+        destinationLink.onclick = (e) => {
+            e.preventDefault();
 
-        const image = document.createElement("img");
-        image.src = this.image;
-        image.alt = this.title;
-
-        vacation.append(title);
-        vacation.append(type);
-        vacation.append(image);
-
-        vacation.onclick = () => {
-            this.showModal();
+            map.src = destinations[destinationName];
+            map.classList.remove("hidden");
         };
 
-        return vacation;
+        destinationLinks.append(destinationLink);
     }
-
-    /* Puts the vacation information in the popup */
-    showModal() {
-        document.getElementById("modal-title").innerHTML = this.title;
-
-        document.getElementById("modal-type").innerHTML =
-            "Type: " + this.type;
-
-        document.getElementById("modal-description").innerHTML =
-            "Description: " + this.description;
-
-        document.getElementById("modal-things").innerHTML =
-            "Things To Do: " + this.thingsToDo;
-
-        document.getElementById("modal-map").src = this.mapSrc;
-
-        document.getElementById("vacation-modal").classList.remove("hidden");
-    }
-}
-
-/* Array of Vacation objects */
-const vacations = [
-    new Vacation(
-        "Asheville",
-        "Mountain",
-        "A creative North Carolina city surrounded by the Blue Ridge Mountains.",
-        "Visit Biltmore Estate, hike, visit art galleries, and try local food.",
-        "images/asheville.jpg",
-        "https://www.google.com/maps?q=Asheville+NC&output=embed"
-    ),
-
-    new Vacation(
-        "Boone",
-        "Mountain",
-        "A scenic mountain town with beautiful views and outdoor activities.",
-        "Hike Grandfather Mountain, walk downtown, and visit Appalachian State.",
-        "images/boone.jpg",
-        "https://www.google.com/maps?q=Boone+NC&output=embed"
-    ),
-
-    new Vacation(
-        "Hot Springs",
-        "Mountain",
-        "A small town in the mountains with natural mineral springs.",
-        "Relax in hot springs, hike, raft the river, and camp.",
-        "images/hot-springs.jpg",
-        "https://www.google.com/maps?q=Hot+Springs+NC&output=embed"
-    ),
-
-    new Vacation(
-        "Table Rock",
-        "Mountain",
-        "A South Carolina state park with a mountain, lake, and trails.",
-        "Hike to the summit, swim, fish, and camp.",
-        "images/table-rock.jpg",
-        "https://www.google.com/maps?q=Table+Rock+State+Park+SC&output=embed"
-    ),
-
-    new Vacation(
-        "Edisto Beach",
-        "Beach",
-        "A peaceful South Carolina beach with nature and wide sandy shores.",
-        "Visit Botany Bay, ride bikes, fish, and relax on the beach.",
-        "images/edisto-beach.jpg",
-        "https://www.google.com/maps?q=Edisto+Beach+SC&output=embed"
-    ),
-
-    new Vacation(
-        "Pawleys Island",
-        "Beach",
-        "A relaxing South Carolina beach known for dunes and seafood.",
-        "Paddleboard, visit Brookgreen Gardens, swim, and eat seafood.",
-        "images/pawleys-island.jpg",
-        "https://www.google.com/maps?q=Pawleys+Island+SC&output=embed"
-    )
-];
-
-/* Adds every vacation card to the page */
-const vacationList = document.getElementById("vacation-list");
-
-for (let i = 0; i < vacations.length; i++) {
-    vacationList.append(vacations[i].getCard());
-}
-
-/* Closes popup when X is clicked */
-document.getElementById("close-modal").onclick = () => {
-    document.getElementById("vacation-modal").classList.add("hidden");
 };
