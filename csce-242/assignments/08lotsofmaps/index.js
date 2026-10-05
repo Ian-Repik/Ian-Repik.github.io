@@ -10,7 +10,7 @@ class Vacation {
         this.mapSrc = mapSrc;
     }
 
-    /* Makes one vacation card */
+    /* This creates and returns one vacation card */
     getCard() {
         const vacation = document.createElement("section");
         vacation.classList.add("vacation");
@@ -29,6 +29,7 @@ class Vacation {
         vacation.append(type);
         vacation.append(image);
 
+        /* Opens this vacation's popup when clicked */
         vacation.onclick = () => {
             this.showModal();
         };
@@ -36,22 +37,17 @@ class Vacation {
         return vacation;
     }
 
-    /* Puts the vacation information in the popup */
+    /* Adds this vacation's information into the popup */
     showModal() {
         document.getElementById("modal-title").innerHTML = this.title;
-
-        document.getElementById("modal-type").innerHTML =
-            "Type: " + this.type;
-
+        document.getElementById("modal-type").innerHTML = this.type;
         document.getElementById("modal-description").innerHTML =
-            "Description: " + this.description;
-
+            this.description;
         document.getElementById("modal-things").innerHTML =
-            "Things To Do: " + this.thingsToDo;
-
+            this.thingsToDo;
         document.getElementById("modal-map").src = this.mapSrc;
 
-        document.getElementById("vacation-modal").classList.remove("hidden");
+        document.getElementById("vacation-modal").style.display = "block";
     }
 }
 
@@ -112,14 +108,23 @@ const vacations = [
     )
 ];
 
-/* Adds every vacation card to the page */
+/* Loops through the array and places every card on the page */
 const vacationList = document.getElementById("vacation-list");
 
 for (let i = 0; i < vacations.length; i++) {
     vacationList.append(vacations[i].getCard());
 }
 
-/* Closes popup when X is clicked */
+/* Closes modal when X is clicked */
 document.getElementById("close-modal").onclick = () => {
-    document.getElementById("vacation-modal").classList.add("hidden");
+    document.getElementById("vacation-modal").style.display = "none";
+};
+
+/* Closes modal if user clicks outside of popup */
+window.onclick = (event) => {
+    const modal = document.getElementById("vacation-modal");
+
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
 };
