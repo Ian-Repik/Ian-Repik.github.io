@@ -31,50 +31,129 @@ body {
 }
 
 #main-header h1 {
-    display: inline-block;
+    position: relative;
+    z-index: 1;
     margin: 0;
-    font-family: "Jacquard 24", serif;
-    font-size: 50px;
-    background-color: #1e332f;
+    padding: 12px 20px;
     border-radius: 999px;
-    padding: 20px;
+    background-color: #1e332f;
+    color: white;
+    font-family: "Jacquard 24", serif;
+    font-size: 36px;
+    font-weight: normal;
 }
 
 /* Navigation Style */
+#main-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+   
+    padding: 14px 20px;
+    background-color: #27433e;
+    color: white;
+}
+
+#main-header h1 {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background-color: #1e332f;
+    color: white;
+    font-family: "Jacquard 24", serif;
+    font-size: 42px;
+}
 
 #main-nav {
-    display: inline-block;
     position: relative;
-    left: 5px;
-    top: 18px;
+    z-index: 1;
 }
 
 #main-nav ul {
-    list-style-type: none;
-    padding-left: 0;
+    display: flex;
+    gap: 18px;
     margin: 0;
-}
-
-#main-nav li {
-    display: inline-block;
-    margin-right: 15px;
+    padding: 0;
+    list-style-type: none;
 }
 
 #main-nav a {
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
     font-weight: bold;
+    text-decoration: none;
 }
 
-/* Dragon Image */
+#main-nav a:hover {
+    color: #cacece;
+    text-decoration: underline;
+}
+
+#toggle-nav {
+    display: none;
+    padding: 8px 12px;
+    border: 2px solid #cacece;
+    border-radius: 8px;
+    background-color: #1e332f;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
 
 #dragonimg {
-    width: 500px;
     position: absolute;
     right: -50px;
     top: 0;
+    width: 500px;
+    opacity: 1;
+    pointer-events: none;
     filter: drop-shadow(0 15px 8px rgba(0, 0, 0, 0.45));
 }
 
+@media (max-width: 700px) {
+    #main-header {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    #main-header h1 {
+        font-size: 34px;
+    }
+
+    #main-nav {
+        width: 100%;
+    }
+
+    #toggle-nav {
+        display: block;
+    }
+
+    #main-nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        margin-top: 10px;
+    }
+
+    #main-nav.showing ul {
+        display: flex;
+    }
+
+    #main-nav a {
+        display: block;
+        padding: 10px;
+        background-color: #1e332f;
+        border-bottom: 1px solid #27433e;
+    }
+
+    #dragonimg {
+        display: none;
+    }
+}
 /* Intro Section */
 
 #intro {
@@ -178,7 +257,12 @@ main {
     font-size: 13px;
     font-style: italic;
 }
-
+footer {
+    background-color: #1e332f;
+    color: #e5e5e5;
+    text-align: center;
+    padding: 5px 0;
+}
 /* Smaller Screens */
 
 @media (max-width: 700px) {
@@ -197,5 +281,37 @@ main {
 
     #intro p {
         border-radius: 25px;
+    }
+    .art-row {
+        gap: 18px;
+    }
+
+    .art-card {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    #art-popup {
+        padding: 14px;
+        align-items: center;
+    }
+
+    #popup-box {
+        width: 100%;
+        max-width: 370px;
+        max-height: 85vh;
+        overflow-y: auto;
+        padding: 22px 18px;
+        border-radius: 15px;
+    }
+
+    #popup-title {
+        font-size: 30px;
+        line-height: 1.1;
+    }
+
+    #popup-description {
+        font-size: 16px;
+        line-height: 1.45;
     }
 }

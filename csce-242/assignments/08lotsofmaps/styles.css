@@ -1,0 +1,145 @@
+/* Structure */
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F19C79;
+    color: #D4E09B;
+}
+
+#content {
+    width: 95%;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+/* Header */
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+header h2 {
+    color: #CBDFBD;
+    font-size: 1.4em;
+    font-weight: normal;
+    margin-top: 0;
+}
+
+/* Vacation Cards */
+
+#vacation-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.vacation {
+    background-color: #A44A3F;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.vacation:hover {
+    box-shadow: 0 4px 10px #777;
+    transform: scale(1.02);
+}
+
+.vacation h2 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 10px 5px 4px;
+}
+
+.vacation p {
+    font-size: 11px;
+    margin: 0 5px 10px;
+}
+
+.vacation img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    object-fit: cover;
+}
+
+/* Modal */
+
+.w3-modal-content {
+    max-width: 760px;
+    background-color: #632e27d0;
+    padding: 15px;
+    position: relative;
+}
+
+.close-button {
+    color: #A44A3F;
+    font-size: 25px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
+
+#modal-content {
+    display: flex;
+    gap: 15px;
+    text-align: left;
+}
+
+#modal-map {
+    width: 50%;
+    height: 260px;
+    border: 0;
+}
+
+#modal-info {
+    width: 50%;
+    color: #A44A3F;
+    padding-right: 15px;
+}
+
+#modal-info h2 {
+    font-weight: normal;
+}
+
+#modal-info p {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 18px;
+}
+
+/* Footer */
+
+footer {
+    margin: 15px;
+    font-size: 12px;
+}
+
+/* Smaller Screens */
+
+@media (max-width: 700px) {
+    #vacation-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #modal-content {
+        flex-direction: column;
+    }
+
+    #modal-map,
+    #modal-info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    #vacation-list {
+        grid-template-columns: 1fr;
+    }
+}

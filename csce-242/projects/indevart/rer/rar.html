@@ -3,18 +3,23 @@
 <head>
     <title>Relics and Relief</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jacquard+24&family=Sail&display=swap">
 </head>
 <body>
-    <header>
-        <h1>Relics and Relief</h1>
+    <header id="main-header">
+    <h1>Relics and Relief</h1>
 
-        <nav id="main-nav">
-            <a href="../../homepage/index.html">Home</a>
-            <a href="../../gallery/index.html">Gallory</a>
-            <a href="../../inprogress/index.html">In Progress</a>
-        </nav>
-    </header>
+    <nav id="main-nav">
+        <button id="toggle-nav" type="button">☰ Menu</button>
 
+        <ul>
+            <li><a href="../../homepage/index.html">Home</a></li>
+            <li><a href="../../gallery/index.html">Gallery</a></li>
+            <li><a href="../../inprogress/index.html">In Progress</a></li>
+        </ul>
+    </nav>
+
+</header>
     <main>
         <section class="intro">
             <h2>About the Project</h2>
@@ -40,6 +45,7 @@ Although scholars do not know the exact purpose of every haniwa, they were likel
             <img class="frame"  src="../../images/IMG_1859.jpg" alt="Clay haniwa sculpture">
             <img class="frame"  src="../../images/IMG_2134.jpg" alt="Clay haniwa sculpture">
         </section>
-    </main>
+    </main> 
+    <script src="../../scripts/nav.js"></script>
 </body>
 </html>
