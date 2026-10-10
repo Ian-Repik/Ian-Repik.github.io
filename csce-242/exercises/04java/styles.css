@@ -1,86 +1,111 @@
-/* Structure */
+/* Main Structure */
 :root {
-    --background:#FAF1E8;
-    --headings: #393D3B;
-    --header: #FAF1E8;
-    --footer: #393D3B;
-    --main-nav: #393D3B;
-    --hero: #C2CFC7;
-    --highlight-bg:#F7BECC;
-    --highlight-fg:  #393D3B;
-    --cards-bg:#FAF1E8;
-    --cards-border:#C2B7AB;
-    --muted-details:#C2B7AB;
-    --light-text: #FAF1E8;
-    --footer-copy-bg: #C2B7AB;
-    --accent-text:#A64F6C;
+    --main-background:#bde0fe;
     --donation:0%;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--background);
-    padding:0px;
-    margin:0px;
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--main-background);
+    color:darkslategray;
 }
 
-/* Header */
+#main-content {
+    width:80%;
+    margin:auto;
+}
+
 #main-header {
-    background-color: var(--background);
-    position: relative;
+    background:#00CED1;
+    border-radius:5px;
+    position:relative;
 }
 
-/* Hero */
-#hero {
-    position:relative; 
+/* Images */
+img {
+    max-width:100%;
 }
 
-#hero img {
-    display:block;
+/* Square */
+.area {
+    background:#cdb4db;
+    position:relative;
 }
 
-.hero-arrow {
+#slide-desc {
     position:absolute;
-    top:50%;
-    transform: translateY(-50%);
-    z-index:1;
-    font-size:48px;
-    color: var(--light-text);
-    font-size: clamp(48px, 7vw, 96px);
-    line-height: 1;
+    bottom:5%;
+    left:5%;
+    background:rgba(255,255,255, 0.8);
+    padding:5px;
+    max-width:40%;
+}
+
+#movie {
+    width:100%;
+}
+
+/* Gallery */
+#gallery section {
+    background:#edf6f9;
+    padding:10px;
+    border-radius:5px;
+    margin:5px;
+
+}
+
+#gallery section h3 {
+    text-align:center;
+}
+
+button {
+    background:turquoise;
+    padding:5px;
+    margin-bottom:5px;
+    border-radius:5px;
+    border:1px solid darkslategray;
+    color:darkslategray;
+}
+
+button:disabled {
+    background:gray;
+}
+
+/* tables */
+table {
+    border-collapse: collapse;
+}
+table th, table td {
+    padding:5px;
+    border:1px solid darkslategray;
+}
+
+table th {
+    background-color: #05668d;
+    color:white;
+}
+
+/* Slideshow */
+#slideshow {
+    position:relative;
+}
+
+.arrow {
+    display:block;
+    font-size:5em;
     text-decoration: none;
+    font-weight: 600;
+    position:absolute;
+    top:30%;
+    color:white;
 }
 
-#hero-arrow-right {
-    right:2%;
+#arrow-prev{
+    left:5%;
 }
 
-#hero-arrow-left {
-    left:2%;
-}
-
-/* Navigation */
-#main-nav ul {
-    list-style-type: none;
-    padding-left:0;
-    margin:0;
-}
-
-#main-nav li {
-    background-color: var(--main-nav);
-    padding:16px 5px;
-    border-bottom: 1px solid var(--light-text);
-    text-align: center;
-    font-size:20px;
-}
-
-#main-nav a, #login-nav a {
-    color: var(--highlight-bg);
-    text-decoration: none;  /* Remover underline */
-}
-
-#main-nav a:hover {
-    color:var(--highlight-bg);
+#arrow-next {
+    right:5%;
 }
 
 /* Navigation */
@@ -92,95 +117,173 @@ body {
 #toggle-nav div {
     width:25px;
     height:2px;
-    background-color:var(--headings);
+    background-color:white;
     margin:6px 0;
 }
 
-/* Page Title */
-#page-title {
-    color: var(--headings);
-    margin: 22px 0 12px;
-    padding: 8px 0 8px 14px;
-    border-left: 6px solid var(--accent-text);
-    font-size: 1.7em;
+nav ul {
+    padding-left:0;     /* Remove indentation */
 }
 
-/* Projects */
-.projects {
-    display: grid;
-    grid-template-columns: 1fr;
-    padding:15px;
+nav li {
+    list-style-type:none;   /* Remove bullet */
+    background:#90e0ef;
+    padding:5px;
 }
 
-.project-card {
-    background: var(--cards-bg);
-    border: 2px solid var(--cards-border);
-    box-shadow: 4px 4px 0 var(--cards-border);
-    margin-bottom:18px;
-    position:relative;
+nav li:not(:last-child) {
+    border-bottom:1px solid white;;
 }
 
-.project-card h3 {
-    margin: 0;
-    padding: 12px 16px;
-    background: var(--hero);
-    color: var(--headings);
-    text-align: center;
+nav a {
+    text-decoration: none;  /* Remove underline */
+    color:white;
 }
 
-.project-card p {
-    margin: 0;
-    padding: 18px;
+/* Date */
+#p-date {
+    position:absolute;
+    top:0;
+    padding:10px;
+    color:white;
 }
 
-/* images */
-img {
-    max-width:100%;
+.error {
+    color:#e29578;
 }
 
-/* Typography */
-#main-header h1 {
-    text-align: center;
-    padding:70px 0 20px;
-    margin:0;
-}
-
-h1, h2, h3 {
-    color:var(--headings);
-}
-
-/* columns for all devices */
-.columns-mobile {
-    display:flex;
-}
-
-/* Styles for JS */
-.cool-link {
-    background:teal;
-    color:magenta;
+/* Ball */
+#ball-playground {
+    position: relative;
 }
 
 #ball {
-    height:50px;
-    width:50px;
-    background-color:#A64F6C;
-    border-radius:50%;
-    bottom:75%;
-}
-
-.bouncing-ball {
-    animation-name: bounce;
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
+    width:25px;
+    height:25px;
+    background:#e29578;
+    border-radius:25px;
     position:absolute;
 }
 
-/* Bounce Animation */
+.bounce {
+    animation-name: bounce;
+    animation-duration: 2s;
+    animation-iteration-count: 2;
+}
+
 @keyframes bounce {
-    0% {bottom:75%; background:red;}
-    25%{background:orange;}
-    50%{background:yellow; bottom:0%;}
-    75%{background:green;}
+    0% {
+        background: #ffa69e;
+        top:100px;
+    }
+    25% {
+        background:#faf3dd;
+    }
+    50% {
+        background: #b8f2e6;
+        top:200px;
+    }
+    75% {
+        background:#aed9e0;
+    }
+    100% {
+        background:#5e6472;
+        top:100px;
+    }
+}
+
+/* Classes */
+.dog {
+    background:#EDF6F9;
+    border:5px solid #E29578;
+    text-align:center;
+    margin-bottom:20px;
+    padding:10px;
+    padding-bottom:30px;
+}
+
+.dog img {
+    margin:auto;
+    display:block;
+}
+
+.dog h3 {
+    color:#E29578;
+    font-size:1.5em;
+}
+
+.dog ul {
+    text-align: left;
+    color:darkslategray;
+}
+
+.dog strong {
+    color:#E29578;
+}
+
+.dog a {
+    text-decoration: none;
+}
+
+/* Fish */
+.fish{
+    background:#EDF6F9;
+    border:5px solid #E29578;
+    text-align:center;
+    margin-bottom:20px;
+    padding:10px;
+}
+
+.fish h3 {
+    color:#E29578;
+    font-size:1.5em;
+}
+
+.fish h4, .fish p{
+    text-align: left;
+    margin-left:20px;
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+.fish ul {
+    text-align: left;
+    color:darkslategray;
+    margin-top:5px;
+}
+
+.fish strong {
+    color:#E29578;
+}
+
+.fish img {
+    max-width: 100%;
+    display:block;
+    margin:auto;
+}
+
+/* Breweries */
+.brewery{
+    background:#EDF6F9;
+    border:5px solid #E29578;
+    text-align:center;
+    margin-bottom:20px;
+    padding:10px;
+    padding-bottom:30px;
+}
+
+.brewery h3 {
+    color:#E29578;
+    font-size:1.5em;
+}
+
+.brewery ul {
+    text-align: left;
+    color:darkslategray;
+}
+
+.brewery strong {
+    color:#E29578;
 }
 
 /* Thermometer */
@@ -190,59 +293,120 @@ h1, h2, h3 {
     margin-right:10%;
     border:2px solid turquoise;
     background:linear-gradient(0deg, red 0% var(--donation), white var(--donation) 100%);
-    margin-left:10px;
-    margin-bottom:10px;
 }
 
-/* Hiding */
-.hidden {
-    display:none;
+/* Contact */
+#map {
+    width:100%;
+    height:400px;
 }
 
+.contact section{
+    background:white;
+    border:5px solid #E29578;
+    text-align:center;
+    margin-bottom:20px;
+    padding:10px;
+    padding-bottom:30px;
+    border-radius:5px;
+}
+
+.contact h3 {
+    color:#E29578;
+    font-size:1.5em;
+}
+
+.contact ul {
+    text-align: left;
+    color:darkslategray;
+}
+
+.contact strong {
+    color:#E29578;
+}
+
+#contact-us label {
+    display:block;
+    margin-bottom:5px;
+    color:#00a896;
+}
+
+#contact-us input, #contact-us textarea {
+    font-size:16px;
+    font-family:Arial, Helvetica, sans-serif;
+    width:60%;
+}
+
+#contact-us textarea {
+    height:5em;
+}
+
+
+#contact-us input:focus, #contact-us textarea:focus {
+    background:#00CED1;
+    color:white;
+}
+
+#contact-us button {
+    width:61%;
+    font-size:16px;
+    
+}
+
+/* Typography */
+#main-header h1 {
+    text-align: center;
+    color:white;
+    padding-top:20px;
+    margin-bottom:0;
+}
+
+h2 {
+    text-align:center;
+}
+
+h3 {
+    color:#05668d;
+}
+
+h4 {
+    color:#00a896;
+    font-weight: 200;
+}
+
+a {
+    color:#e29578;
+}
+
+/* Hide */
 .hide-small {
     display:none;
 }
 
-/* Responsive Design */
+.hidden {
+    display:none;
+}
 
-/* 600 px or larger */
-@media (min-width: 1000px) {
-    .hide-small {
-        display:flex;
-    }
-
-    /* Structure */
+/* Larger devices */
+@media (min-width: 768px) {
     #content {
-        width:80%;
         margin:auto;
     }
 
     .columns {
         display:flex;
-    }
-
-    .projects {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 18px;
-        padding: 20px 0 40px;
-    }
-
-    .project-card {
-        margin-bottom:0;
-        min-height:200px;
-    }
+        flex-wrap:wrap;
+    }   
     
-    /* Navigation */
-    #main-nav li {
-        flex:1;
-        border:0;
+    #gallery {
+        justify-content: flex-start;
+        gap:1em;
     }
 
-    #toggle-nav {
-        display:none;
+    #gallery section {
+        width:22%;
     }
 
-    /* Columns */
     .one {
         flex:1;
     }
@@ -256,14 +420,52 @@ h1, h2, h3 {
     }
 
     .four {
-        flex:4
+        flex:4;
     }
 
-    .five {
-        flex:5;
+    nav ul {
+        display:flex;
     }
 
-    .six {
-        flex:6;
+    nav li {
+        background:transparent;
+        flex:1;
+        text-align: center;
+    }
+
+    nav a {
+        border-bottom:1px solid transparent;
+    }
+
+    nav a:hover {
+        border-bottom:1px solid white;
+    }
+
+    nav li:not(:last-child) {
+        border-bottom:none;
+    }
+
+    #toggle-nav {
+        display:none;
+    }
+
+    .hide-small {
+        display:flex;
+    }
+
+    #dogs, #breweries, .contact {
+        gap:5%;
+    }
+
+    #dogs section, #breweries, .contact section {
+        flex:1;
+    }
+
+    #fish-list {
+        justify-content: space-around;
+    }
+    #fish-list section {
+        max-width:20%;
+        
     }
 }

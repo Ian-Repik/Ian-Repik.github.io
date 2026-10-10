@@ -71,29 +71,34 @@ document.getElementById("btn-show-toys").onclick = () => {
 //show a table of toys and prices
 document.getElementById("btn-show-toy-prices").onclick = () => {
     const div = document.getElementById("toy-info");
+    div.innerHTML = "";
     
     const toyMap = [];
-    toyMap["doll"]=129.99;
-    toyMap["skate board"]= 200.00;
-    toyMap["mini car"]= 20.99;
-    toyMap["board game"]= 20.99;
-    toyMap["bracletts"]= 19.24;
+    toyMap["doll"]= 129.99;
+    toyMap["skate board"] = 200.00;
+    toyMap["mini car"] = 1.99;
+    toyMap["board game"] = 20.99;
+    toyMap["braclettes"] = 19.24;
 
     const table = document.createElement("table");
     div.append(table);
-    let  tr = document.createElement("tr");
-    table.append(tr);
-    th = document.createElement("th");
-    header.append(th);
-    th.innerHTML =  "Name";
-    th = document.createElement("th");
-    header.append(th);
-    th.innerHTML = "Price";
-    for(let toy in toyMap){
-        tr=document.createElement("tr");
-        table.append(tr);        
-        let td = document.createElement("td");
-        td.innerHTML = toyMap[toy];
-        tr.append(td);
+    table.append(createTR("Name", "Price", "th"));
+
+    for(let toy in toyMap) {
+        table.append(createTR(toy, "$" + toyMap[toy], "td")); 
     }
 };
+
+const createElement = (data, type) => {
+    console.log(type);
+    const elem = document.createElement(type);
+    elem.innerHTML = data;
+    return elem;
+};
+
+const createTR = (data1, data2, type) => {
+    const tr = document.createElement("tr");
+    tr.append(createElement(data1, type));
+    tr.append(createElement(data2, type));
+    return tr;
+}
