@@ -1,0 +1,74 @@
+[
+    {
+        "_id": 1,
+        "title": "Relics and Relief",
+        "img_name": "images/hanwia.jpg",
+        "medium": "Clay sculpture",
+        "year": "2026",
+        "description": "A contemporary haniwa sculpture that connects ancient Japanese clay figures with my own identity and skateboard culture.",
+        "link": "indevart/rer/rar.html"
+    },
+    {
+        "_id": 2,
+        "title": "Haniwa Sculpture Process",
+        "img_name": "images/IMG_1813.jpg",
+        "medium": "Clay sculpture process",
+        "year": "2026",
+        "description": "An early view of the clay haniwa sculpture before the finished piece.",
+        "link": "indevart/rer/rar.html"
+    },
+    {
+        "_id": 3,
+        "title": "Squid Slab",
+        "img_name": "images/sqiud.jpg",
+        "medium": "Glazed clay slab",
+        "year": "2024",
+        "description": "A giant squid attacks a ship in a raised clay relief inspired by sea-monster stories.",
+        "link": "indevart/clayslab/clay.html"
+    },
+    {
+        "_id": 4,
+        "title": "Alien Skateboard",
+        "img_name": "images/sk8.jpg",
+        "medium": "Acrylic paint on skateboard",
+        "year": "2025",
+        "description": "An alien skateboard painting inspired by a skater's idea of what an alien could look like.",
+        "link": "indevart/sk8/sk8.html"
+    },
+    {
+        "_id": 5,
+        "title": "Skeleton Poster",
+        "img_name": "images/skely.jpg",
+        "medium": "Poster design",
+        "year": "2025",
+        "description": "A Yeat-inspired poster made for a high school art club project.",
+        "link": "indevart/yeat/yeat.html"
+    },
+    {
+        "_id": 6,
+        "title": "Alien Cat",
+        "img_name": "images/alien_cat.jpg",
+        "medium": "Painting",
+        "year": "2025",
+        "description": "A fun painting of a cat wearing an alien body like a suit.",
+        "link": "indevart/cat/cat.html"
+    },
+    {
+        "_id": 7,
+        "title": "Grain and Glow",
+        "img_name": "images/grain_glow.jpg",
+        "medium": "Light sculpture",
+        "year": "2025",
+        "description": "An in-progress project experimenting with green light, projection, and a traffic-light-inspired form.",
+        "link": "inprogress/index.html"
+    },
+    {
+        "_id": 8,
+        "title": "Green Light Process",
+        "img_name": "images/IMG_2124.jpg",
+        "medium": "Wood and light experiment",
+        "year": "2025",
+        "description": "An early experiment for Grain and Glow using an iris-aperture idea to project light.",
+        "link": "inprogress/index.html"
+    }
+]
