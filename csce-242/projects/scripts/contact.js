@@ -1,16 +1,19 @@
-// https://web3forms.com/
+const form = document.getElementById("contact-form");
+const submitBtn = form.querySelector('button[type="submit"]');
 
-document.getElementById("contact-form").onsubmit = async (e) => {
+form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
+    const formData = new FormData(form);
     formData.append("access_key", "ef3453da-ace4-432d-9304-6fe04343f8a1");
 
-    const result = document.getElementById("result");
-    result.innerHTML = "Sending...";
+    const originalText = submitBtn.textContent;
+
+    submitBtn.textContent = "Sending...";
+    submitBtn.disabled = true;
 
     try {
-       const response = await fetch("https://api.web3forms.com/submit", {, {
+        const response = await fetch("https://api.web3forms.com/submit", {
             method: "POST",
             body: formData
         });
@@ -18,12 +21,15 @@ document.getElementById("contact-form").onsubmit = async (e) => {
         const data = await response.json();
 
         if (response.ok) {
-            result.innerHTML = "Message Sent!";
-            e.target.reset();
+            alert("Success! Your message has been sent.");
+            form.reset();
         } else {
-            result.innerHTML = "Error: " + data.message;
+            alert("Error: " + data.message);
         }
     } catch (error) {
-        result.innerHTML = "Sorry, we couldn't send your message.";
+        alert("Something went wrong. Please try again.");
+    } finally {
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
     }
-};
+});
