@@ -106,7 +106,43 @@ This project explores the idea of using an iris aperture, similar to the apertur
         <p>Click outside this box to close.</p>
     </div>
 </div>
+ <h2 id="page-title">Contact Me</h2>
 
+    <section id="contact-and-map">
+        <section id="contact-section">
+            <form id="contact-form" action="" method="POST">
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </p>
+
+                <p><button type="submit">Submit</button></p>
+
+                <p id="result"></p>
+            </form>
+        </section>
+
+        <section id="map-section">
+            <h3>Art Inspiration</h3>
+            <p>The Columbia Museum of Art is a local art space that inspires me.</p>
+
+            <iframe
+                src="https://www.google.com/maps?q=Columbia%20Museum%20of%20Art&output=embed"
+                title="Columbia Museum of Art Map"
+                loading="lazy">
+            </iframe>
+        </section>
+    </section>
 
             </main>
             <footer>
@@ -116,5 +152,6 @@ This project explores the idea of using an iris aperture, similar to the apertur
             </div>  
         <script src="../scripts/script.js"></script>
         <script src="../scripts/nav.js"></script>
+        <script src="../scripts/contact.js"></script>
     </body>
 </html>

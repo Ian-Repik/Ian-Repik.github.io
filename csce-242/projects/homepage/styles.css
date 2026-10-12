@@ -315,3 +315,114 @@ footer {
         line-height: 1.45;
     }
 }
+/* Contact Page */
+
+#page-title {
+    margin-top: 0;
+    font-family: "Sail", serif;
+    font-size: 42px;
+    text-align: center;
+    color: #27433e;
+}
+
+#contact-and-map {
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
+}
+
+#contact-section,
+#map-section {
+    flex: 1;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #e5e5e5;
+    border: 4px solid #27433e;
+    border-radius: 20px;
+    color: #27433e;
+}
+
+#contact-section {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#contact-form p {
+    margin: 18px 0;
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-family: "Sail", serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #27433e;
+    border-radius: 8px;
+    background-color: #cacece;
+    color: #1e332f;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 12px 22px;
+    border: 0;
+    border-radius: 999px;
+    background-color: #27433e;
+    color: white;
+    font-family: "Sail", serif;
+    font-size: 23px;
+    cursor: pointer;
+}
+
+#contact-form button:hover {
+    background-color: #1e332f;
+}
+
+#result {
+    min-height: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.success {
+    color: #176b35;
+}
+
+.error {
+    color: #8b0000;
+}
+
+#map-section {
+    text-align: center;
+}
+
+#map-section h3 {
+    margin-top: 0;
+    font-family: "Sail", serif;
+    font-size: 32px;
+}
+
+#map-section p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#map-section iframe {
+    width: 100%;
+    height: 350px;
+    border: 3px solid #27433e;
+    border-radius: 12px;
+    box-sizing: border-box;
+}
